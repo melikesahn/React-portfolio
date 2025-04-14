@@ -17,6 +17,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoTypescript,BiLogoJavascript,BiLogoFirebase } from "react-icons/bi";
 
 import { PiFileCSharpFill } from "react-icons/pi";
+import { useTranslation } from 'react-i18next';
 
 const skills = [
     {
@@ -54,12 +55,13 @@ const skills = [
   ]
 
 const Skills = () => {
+  const { t } = useTranslation();
   return (
     <div className="max-w-[650px] mx-auto flex flex-col justify-center px-4 text-gray-200 pb-8 md:py-12" id="skills">
         <Reveal>
-        <h2 className="text-3xl font-bold mb-4 text-center">Yetenekler</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center">{t('skills.title')}</h2>
         <p className="text-center mb-8">
-            Frontend ve Full-Stack projeler üzerine çalışıyorum. Bugüne kadar yaptığım  <a href="https://github.com/melikesahn?tab=repositories" target="_blank" className="underline hover:text-purple-600">projelerim</a>.
+            {t('skills.description')} <a href="https://github.com/melikesahn?tab=repositories" target="_blank" className="underline hover:text-purple-600">{t('skills.description2')}</a>
         </p>
 
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8

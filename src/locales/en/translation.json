@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "skills": "Skills"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Web Developer",
+    "description": "New graduate computer engineer."
+  },
+  "contact": {
+    "title1": "Get ",
+    "title2": "in Touch",
+    "name": "Name...",
+    "email": "Email...",
+    "message": "Message...",
+    "send": "Send"
+  },
+  "about": {
+    "title": "About ",
+    "title2": "Me",
+    "description": "In my graduation project, I developed a MERN stack website with React, Vue.js, Redux and Node.js; I provided data management with RESTful API and MongoDB. I am currently developing a project with API integration, SSR, advanced search and filtering features using Next.js and a real-time chat application with MERN stack. In machine learning and deep learning, I worked on CNN and YOLO based image classification projects with TensorFlow, Keras, PyTorch.",
+    "project": "project",
+    "learn": "years of learning"
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "I am working on Frontend ,Full-Stack and Game Development projects. These are the my ",
+    "description2": "projects."
+  },
+  "projects": {
+    "title": "Projects",
+    "visitSite": "Visit Site",
+    "project1": {
+      "title": "MERN Stack Website",
+      "description": "Real-time chat application. Developed using React, Node.js, Express.js, MongoDB, Socket.IO."
+    },
+    "project2": {
+      "title": "Next.js Website",
+      "description": "Developing an e-commerce site using TypeScript, Tailwind CSS, SSR, API integration..."
+    },
+    "project3": {
+      "title": "React Portfolio Website",
+      "description": "Personal website developed using React, Tailwind CSS, Framer Motion"
+    }
+  }
+}

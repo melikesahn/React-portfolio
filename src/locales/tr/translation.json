@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "greeting": "Merhaba, ben",
+    "role": "Web Geliştirici",
+    "description": "Yeni mezun bilgisayar mühendisi."
+  },
+  "contact": {
+    "title1": "Benimle ",
+    "title2": "İletişime Geç",
+    "name": "Adın Soyadın...",
+    "email": "E-posta Adresiniz...",
+    "message": "Mesajınız...",
+    "send": "Gönder"
+  },
+  "about": {
+    "title": "Hakkım",
+    "title2": "da",
+    "description": "Bitirme projemde React, Vue.js, Redux ve Node.js ile bir MERN stack web sitesi geliştirdim; RESTful API ve MongoDB ile veri yönetimi sağladım. Şu anda Next.js kullanarak API entegrasyonu, SSR, gelişmiş arama ve filtreleme özellikleri içeren bir proje ve MERN stack ile gerçek zamanlı bir sohbet uygulaması geliştiriyorum. Makine öğrenimi ve derin öğrenmede TensorFlow, Keras, PyTorch ile CNN ve YOLO tabanlı görüntü sınıflandırma projelerinde çalıştım.",
+    "project": "proje",
+    "learn": "yıl öğrenme"
+  },
+  "skills": {
+    "title": "Yetenekler",
+    "description": "Frontend, Full-Stack ve Oyun Geliştirme projeleri üzerine çalışıyorum. Bugüne kadar yaptığım ",
+    "description2": "projelerim."
+  },
+  "projects": {
+    "title": "Projelerim",
+    "visitSite": "Projeyi Görüntüle",
+    "project1": {
+      "title": "MERN Stack Sohbet Uygulaması",
+      "description": "Gerçek zamanlı chat uygulaması. React, Node.js, Express.js, MongoDB, Socket.IO kullanarak geliştirildi."
+    },
+    "project2": {
+      "title": "Next.js E-Ticaret Sitesi",
+      "description": "TypeScript ,Tailwind CSS, SSR, Api entegrasyonu kullanarak e-ticaret sitesi geliştirmeye devam ediyorum..."
+    },
+    "project3": {
+      "title": "Kişisel Portfolio Sitesi",
+      "description": "React, Tailwind CSS, Framer Motion kullanarak geliştirilen kişisel web sitesi"
+    }
+  }
+}

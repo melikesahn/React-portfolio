@@ -2,6 +2,7 @@ import cv from "../assets/cv.pdf"
 import profilepic from "../assets/hero.webp";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect.jsx";
+import { useTranslation } from 'react-i18next';
 import {
   AiOutlineGithub,
  // AiOutlineInstagram,
@@ -32,6 +33,7 @@ const iconVariants = (duration)=>({
 
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <div className="mt-44 max-w-[1200px] mx-auto relative" >
      <div className="grid md:grid-cols-2 place-items-center gap-8">
@@ -61,7 +63,7 @@ const Hero = () => {
                 transition={{ duration: 1, delay: 0.5 }}
                 className="text-gray-200 md:text-2xl text-5xl tracking-tight mb-4"
                 >
-                    Merhaba,ben <br/>
+                    {t('hero.greeting')}<br/>
                     <span className="text-purple-600 md:text-5xl">Melike Şahin</span>
                 </motion.p>
                 <motion.p
@@ -71,7 +73,7 @@ const Hero = () => {
                 transition={{ duration: 1, delay: 1 }}
                 className="text-gray-300 max-w-[300px] md:max-w-[500px] md:text-2xl text-lg mb-6"
                 >
-                    Yeni mezun bilgisayar mühendisiyim.
+                    {t('hero.description')}
                 </motion.p>
 
                 <motion.div
