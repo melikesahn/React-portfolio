@@ -3,6 +3,7 @@ import project3Video from "../assets/project3.mp4"
 import project1 from "../assets/project1.jpeg"
 import project2 from "../assets/project2.jpeg"
 import project3 from "../assets/project3.jpg"
+import gameproject1Video from "../assets/gameproject1.mp4"
 import { AiOutlineGithub } from 'react-icons/ai'
 import Reveal from './Reveal.jsx';
 import { useTranslation } from 'react-i18next';
@@ -14,6 +15,16 @@ const Projects = () => {
     {
       img: project1,
       video: project1Video,
+      title: t('projects.project1.title'),
+      description: t('projects.project1.description'),
+      links: {
+        site: "https://michat-qhhg.onrender.com",
+        github: "https://github.com/melikesahn/chatt-app-live",
+      },
+    },
+     {
+      img: project1,
+      video: gameproject1Video,
       title: t('projects.project1.title'),
       description: t('projects.project1.description'),
       links: {

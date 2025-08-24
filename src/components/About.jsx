@@ -22,7 +22,7 @@ const About = () => {
                     </p>
                 </div>
 
-                <div className="flex mt-10 items-center gap-7">
+{/*                 <div className="flex mt-10 items-center gap-7">
                     <div className="bg-gray-800/40 p-4 rounded-lg">
                         <h3 className="md:text-4xl text-2xl font-semibold text-white">10
                             <span>+</span>
@@ -37,14 +37,14 @@ const About = () => {
                         <p className="text-xs md:text-base"><span>{t('about.learn')}</span></p>
                     </div>
 
-                {/*     <div className="bg-gray-800/40 p-5 rounded-lg">
+                     <div className="bg-gray-800/40 p-5 rounded-lg">
                         <h3 className="md:text-4xl text-2xl font-semibold text-white">30
                             <span>+</span>
                         </h3>
                         <p className="text-xs md:text-base"><span>happy clients</span></p>
-                    </div> */}
+                    </div> 
 
-                </div>
+                </div> */}
                 </motion.div>
                 
 
