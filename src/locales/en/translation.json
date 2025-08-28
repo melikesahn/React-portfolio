@@ -22,7 +22,7 @@
   "about": {
     "title": "About ",
     "title2": "Me",
-    "description": "In my graduation project, I developed a MERN stack website with React, Vue.js, Redux and Node.js; I provided data management with RESTful API and MongoDB. I am currently developing a project with API integration, SSR, advanced search and filtering features using Next.js and a real-time chat application with MERN stack. In machine learning and deep learning, I worked on CNN and YOLO based image classification projects with TensorFlow, Keras, PyTorch.",
+    "description": "In my graduation project, I developed a MERN stack website with React, Vue.js, Redux and Node.js; I provided data management with RESTful API and MongoDB. I am currently developing a project with API integration, SSR, advanced search and filtering features using Next.js and a real-time chat application with MERN stack. In machine learning and deep learning, I worked on CNN and YOLO based image classification projects with TensorFlow, Keras, PyTorch. ",
     "project": "project",
     "learn": "years of learning"
   },

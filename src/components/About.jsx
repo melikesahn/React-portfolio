@@ -1,54 +1,136 @@
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next'; 
+import {gsap} from "gsap";
+import { useRef, useEffect } from "react";
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+import profilepic from "../assets/avatar.png";
 
 const About = () => {
+  
+  const sectionRef=useRef(null);
+  const titleRef  =useRef(null); 
+  const introRef  =useRef(null);
+  const starsRef  =useRef([]);
+
+  useEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger)
+    //title
+    gsap.fromTo(
+        titleRef.current,
+        {y: 100, opacity: 0},
+        {
+            y: -200,
+            opacity:1,
+            duration:0.8,
+            scrollTrigger:{
+                trigger: sectionRef.current,
+                start: "top 40%",
+                toggleActions: "play none none reverse",
+            }
+        }
+    )
+    //intro
+    gsap.fromTo(
+        introRef.current,
+        {y: 100, opacity: 0, filter:"blur(10px)"},
+        {
+            y: -400,
+            opacity:1,
+            duration:1.5,
+            filter: "blur(0px)",
+            scrollTrigger:{
+                trigger: sectionRef.current,
+                start: "top 40%",
+                toggleActions: "play none none reverse",
+            }
+        }
+    )
+    //stars animation speed
+    starsRef.current.forEach((star, index) =>{
+      const direction = index % 2 === 0 ? 1 : -1
+      const speed = 0.5 + Math.random() * 0.5
+
+      gsap.to(star, {
+        x: ` ${direction * (100 + index * 20)}` ,
+        y: ` ${direction * -50 - index * 10 }` ,
+        rotation: direction * 360,
+        ease: "none" ,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom" ,
+          end: "bottom top",
+          scrub: speed,
+        }
+
+      })
+    })
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.vars.trigger === sectionRef.current){
+          trigger.kill()
+        }
+      })
+    }
+  })
+
+  const addToStars = (el) =>  {
+    if (el && !starsRef.current.includes(el)){
+      starsRef.current.push(el)
+    }
+  }
+    
   const { t } = useTranslation();
   return (
-    <div className="max-w-[1200px] mx-auto flex justify-center px-4 text-gray-200 pb-8 md:py-12 " id="about">
-     <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 1 }}
-            className="flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
-        >
-                <div className="text-gray-300 my-3">
-                
-                
-                    <h3 className="text-4xl font-semibold mb-5">{t('about.title')}<span>{t('about.title2')}</span></h3>
-                    <p className="text-justify leading-7 w-11/12 mx-auto">
-                    {t('about.description')}
-                    
-                    </p>
-                </div>
+    <section ref={sectionRef} className="h-screen relative overflow-hidden
+     bg-gradient-to-b from-black to-[#9a74cf50] " id="about">
 
-{/*                 <div className="flex mt-10 items-center gap-7">
-                    <div className="bg-gray-800/40 p-4 rounded-lg">
-                        <h3 className="md:text-4xl text-2xl font-semibold text-white">10
-                            <span>+</span>
-                        </h3>
-                        <p className="text-xs md:text-base"><span>{t('about.project')}</span></p>
-                    </div>
+     <div className='absolute inset-0 overflow-hidden'>
+     {/*stars */}
+     {[...Array(10)].map((_,i)=>(
+      <div
+        ref={addToStars}
+        key={`star-${i}`}
+        className='absolute rounded-full'
+        style={{
+          width: `${ 10 + i * 3}px`,
+          height: `${ 10 + i * 3}px`,
+          backgroundColor: "white",
+          opacity: 0.2 + Math.random() * 0.4,
+          top: `${Math.random() * 100}% `,
+          left: `${Math.random() * 100 }% `,
+        }}
+        />
+     ))}
 
-                    <div className="bg-gray-800/40 p-5 rounded-lg">
-                        <h3 className="md:text-4xl text-2xl font-semibold text-white">4
-                            <span>+</span>
-                        </h3>
-                        <p className="text-xs md:text-base"><span>{t('about.learn')}</span></p>
-                    </div>
+     </div>
 
-                     <div className="bg-gray-800/40 p-5 rounded-lg">
-                        <h3 className="md:text-4xl text-2xl font-semibold text-white">30
-                            <span>+</span>
-                        </h3>
-                        <p className="text-xs md:text-base"><span>happy clients</span></p>
-                    </div> 
+     <div className="container mx-auto h-full px-4 flex flex-col 
+     items-center justify-center">
 
-                </div> */}
-                </motion.div>
-                
+     <h1 ref={titleRef} className=" text-white text-4xl font-semibold 
+     md:text-6xl sm:mb-16 text-center opacity-0  ">
+     {t('about.title')}<span>{t('about.title2')}</span></h1>
 
-            </div>
+     </div>
+
+        <div ref = {introRef} className="absolute lg:bottom-[-20rem] 
+        md:bottom-[-10rem] bottom-[-20rem] left-0 w-full flex md:flex-row 
+        flex-col justify-between lg:px-24 px-5 items-center ">
+        
+           
+
+            <h3 className="text-sm md:text-2xl font-bold text-purple-200 
+            z-50 lg:max-w-[45rem] max-w-[27rem] tracking-wider md:mt-20 
+            sm:mt-[-40rem] mt-[-32rem]">
+            {t('about.description')}
+            </h3>
+
+             <img className='lg:h-[30rem] md:h-[25rem] h-[20rem] 
+            mix-blend-lighten' src={profilepic} alt='profile-img'/>
+            
+        </div>
+
+            </section>
   )
 }
 
