@@ -10,7 +10,9 @@ import {
   DiPython,
   
 } from "react-icons/di"
-import Reveal from "./Reveal"
+import {gsap} from "gsap";
+import { useRef, useEffect } from "react";
+import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { FaVuejs } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -18,6 +20,18 @@ import { BiLogoTypescript,BiLogoJavascript,BiLogoFirebase } from "react-icons/bi
 
 import { PiFileCSharpFill } from "react-icons/pi";
 import { useTranslation } from 'react-i18next';
+// spin effect bir kere kaydedilsin
+gsap.registerEffect({
+  name: "spin",
+  effect(targets) {
+    return gsap.to(targets, {
+      rotation: (i, el) =>
+        gsap.utils.snap(360, gsap.getProperty(el, "rotation") + 360),
+      duration: 1,
+      ease: "power2.inOut",
+    });
+  },
+});
 
 const skills = [
     {
@@ -56,10 +70,50 @@ const skills = [
 
 const Skills = () => {
   const { t } = useTranslation();
+  const sectionRef=useRef(null);
+  const boxesRef = useRef([]);
+  boxesRef.current = [];
+      
+
+    useEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger)
+    //title
+    gsap.fromTo(
+        sectionRef.current,
+        {y: 100, opacity: 0},
+        {
+            y: -50,
+            opacity:1,
+            duration:0.8,
+            scrollTrigger:{
+                trigger: sectionRef.current,
+                start: "top 40%",
+                toggleActions: "play none none reverse",
+            }
+        }
+    )
+    //boxes
+  boxesRef.current.forEach((box) => {
+  if (box) {
+    gsap.to(box, {
+      rotation: 360,
+      duration: 1,
+      scrollTrigger: {
+        trigger: box,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }
+});
+ 
+
+  }, []);
+
   return (
-    <div className="max-w-[650px] mx-auto flex flex-col justify-center px-4 text-gray-200 pb-8 md:py-12" id="skills">
-        <Reveal>
-        <h2 className="text-3xl font-bold mb-4 text-center">{t('skills.title')}</h2>
+    <section ref={sectionRef} className="h-screen max-w-[800px] mx-auto flex flex-col justify-center px-4 text-gray-200 pb-8 md:py-12" id="skills">
+        
+        <h2  className="text-3xl font-bold mb-4 text-center">{t('skills.title')}</h2>
         <p className="text-center mb-8">
             {t('skills.description')} <a href="https://github.com/melikesahn?tab=repositories" target="_blank" className="underline hover:text-purple-600">{t('skills.description2')}</a>
         </p>
@@ -67,7 +121,7 @@ const Skills = () => {
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8
                         ">
             {skills.map((skill, index) => (
-                <div key={index} className="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg 
+                <div ref={(el) => (boxesRef.current[index] = el)} key={index} className="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg 
                                 w-full md:w-1/2">
                     <h3 className="text-xl font-bold mb-4 text-center">{skill.category}</h3>
                     <div className="grid grid-cols-2 gap-4">
@@ -81,8 +135,8 @@ const Skills = () => {
                 </div>
             ))}
         </div>
-        </Reveal>
-    </div>
+      
+    </section>
   )
 }
 

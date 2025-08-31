@@ -4,6 +4,8 @@ import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import About from "./components/About"
 import Hero from "./components/Hero"
+import Skills from "./components/Skills"
+import Contact from "./components/Contact"
 import Navbar from "./components/Navbar"
 import CustomCursor from "./components/CustomCursor"
 import Portfolio from "./components/Portfolio"
@@ -26,7 +28,9 @@ const App = () => {
       <Hero />
       <CustomCursor/>
       <About />
+      <Skills/>
      <Portfolio/>
+     <Contact/>
       
      
     </div>

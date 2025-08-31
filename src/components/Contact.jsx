@@ -1,4 +1,3 @@
-//import { motion } from "framer-motion"
 import Reveal from "./Reveal"
 import { IoIosMail } from "react-icons/io";
 import { useTranslation } from 'react-i18next';
@@ -6,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Contact = () => {
   const { t } = useTranslation();
   return (
-    <div className="px-6 max-w-[1000px] mx-auto md:my-12" id="contact">
+    <div className="h-screen px-6 max-w-[1000px] mx-auto md:my-12" id="contact">
         <Reveal>
         <div className="grid md:grid-cols-2 place-items-center">
             <div>
