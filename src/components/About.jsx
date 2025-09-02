@@ -3,7 +3,7 @@ import {gsap} from "gsap";
 import { useRef, useEffect } from "react";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import profilepic from "../assets/avatar.png";
-
+//import profilepic2 from "../assets/pixelAvatar.png";
 const About = () => {
   
   const sectionRef=useRef(null);
@@ -108,7 +108,7 @@ const About = () => {
 
      <h1 ref={titleRef} className=" text-white text-4xl font-semibold 
      md:text-6xl sm:mb-16 text-center opacity-0  ">
-     {t('about.title')}<span>{t('about.title2')}</span></h1>
+     {t('about.title')}<span className='purple'>{t('about.title2')}</span></h1>
 
      </div>
 

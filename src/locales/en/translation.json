@@ -39,12 +39,12 @@
       "description": "Real-time chat application. Developed using React, Node.js, Express.js, MongoDB, Socket.IO."
     },
     "project2": {
-      "title": "Next.js Website",
-      "description": "Developing an e-commerce site using TypeScript, Tailwind CSS, SSR, API integration..."
+      "title": "React Portfolio Website",
+      "description": "Personal website developed using React, Tailwind CSS, Framer Motion and GSAP"
     },
     "project3": {
-      "title": "React Portfolio Website",
-      "description": "Personal website developed using React, Tailwind CSS, Framer Motion"
+      "title": "YZTA Bootcamp Game Project",
+      "description": "3D top-down roguelike game. Develop using unity ve C#."
     }
   }
 }

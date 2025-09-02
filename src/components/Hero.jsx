@@ -1,5 +1,6 @@
 import cv from "../assets/cv.pdf";
-import profilepic from "../assets/hero.webp";
+//import profilepic from "../assets/hero.webp";
+import profilepic from "../assets/avatar.png";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect.jsx";
 import { useTranslation } from "react-i18next";
@@ -107,19 +108,19 @@ const Hero = () => {
         </motion.div>
 
         {/* Right side (Image) */}
-         <motion.img
+          <motion.img
           src={profilepic}
-          className="w-32 sm:w-48 md:w-64 lg:w-80 cursor-pointer rounded-full shadow-xl shadow-purple-600 transition-all duration-300 hover:translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-purple-900"
+          className="w-32 sm:w-48 md:w-64 lg:w-80 cursor-pointer rounded-full shadow-xl shadow-purple-600"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
+          whileHover={{ scale: 1.05, y: 8, boxShadow: "0px 10px 30px rgba(128,0,128,0.8)" }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         /> 
           {/* Right side (Spline 3D) */}
          
-             {/* <Spline scene="https://prod.spline.design/xpXw24ysy4pzp5BA/scene.splinecode" /> */}
-
-      </div>
+            {/* <Spline scene="https://prod.spline.design/eiYyVoYAFB4gtfyL/scene.splinecode" /> */}
+        </div>
 
       {/* Tech icons */}
       <motion.div

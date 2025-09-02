@@ -22,7 +22,7 @@ const Navbar = () => {
     },
   }
 
-  // 🔥 Menü elemanlarını tek bir array’de tanımladık
+  //  Menü elemanlarını tek bir array’de tanımladık
   const menuItems = [
     { to: "about", label: t("nav.about") },
     { to: "skills", label: t("nav.skills") },
@@ -64,7 +64,7 @@ const Navbar = () => {
                   damping: 20,
                   delay: 0.7 + index * 0.2,
                 }}
-                className="hover:text-purple-600 hover:underline"
+                className="hover:text-purple-600 "
               >
                 <Link to={item.to} smooth={true} offset={50} duration={100}>
                   {item.label}

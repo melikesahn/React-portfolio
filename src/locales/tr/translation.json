@@ -39,12 +39,12 @@
       "description": "Gerçek zamanlı chat uygulaması. React, Node.js, Express.js, MongoDB, Socket.IO kullanarak geliştirildi."
     },
     "project2": {
-      "title": "Next.js E-Ticaret Sitesi",
-      "description": "TypeScript ,Tailwind CSS, SSR, Api entegrasyonu kullanarak e-ticaret sitesi geliştirmeye devam ediyorum..."
+      "title": "Kişisel Portfolio Sitesi",
+      "description": "React, Tailwind CSS, Framer Motion ve GSAP kullanarak geliştirilen kişisel web sitesi"
     },
     "project3": {
-      "title": "Kişisel Portfolio Sitesi",
-      "description": "React, Tailwind CSS, Framer Motion kullanarak geliştirilen kişisel web sitesi"
+      "title": "YZTA Bootcamp Oyunumuz",
+      "description": "3D top-down roguelike oyun. Unity ve C# kullanılarak geliştirildi."
     }
   }
 }

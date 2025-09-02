@@ -15,7 +15,7 @@ p{
     @apply text-xl tracking-tight leading-relaxed
 }
 
-span{
+span.purple {
     @apply text-purple-600
 }
 
