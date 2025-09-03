@@ -8,7 +8,6 @@ import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 import { DiJavascript1, DiNodejsSmall, DiReact, DiMongodb } from "react-icons/di";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
-import Spline from '@splinetool/react-spline';
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -117,9 +116,7 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         /> 
-          {/* Right side (Spline 3D) */}
-         
-            {/* <Spline scene="https://prod.spline.design/eiYyVoYAFB4gtfyL/scene.splinecode" /> */}
+          
         </div>
 
       {/* Tech icons */}

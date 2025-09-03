@@ -174,7 +174,7 @@ if (descRef.current) {
             key={index}
             className="flex items-center space-x-2 border border-purple-900 px-4 py-2 rounded-lg bg-purple-900/20 shadow-md"
           >
-            <span className="text-2xl">{tech.icon}</span>
+            <span className="text-4xl">{tech.icon}</span>
             <span className="purple">{tech.name}</span>
           </div>
         ))}

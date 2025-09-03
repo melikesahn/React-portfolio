@@ -87,6 +87,7 @@ const Contact = () => {
       contactTextRef.current,
       {
         opacity: 1,
+        scale: 0.2,
         ease: "power2.in",
         duration: 0.2,
       },
@@ -123,75 +124,76 @@ const Contact = () => {
         </p>
         <div
         ref={contactTextRef}
-        className="grid md:grid-cols-2 place-items-center opacity-0"
+        className="text-center relative flex flex-col items-center 
+        justify-center opacity"
         >
-           <div>
-            <div className="text-gray-300 my-3">
-                <h3 className="text-4xl font-semibold mb-5">  
-                {t('contact.title1')} <span>{t('contact.title2')}
-                </span></h3>
-                <p className="xt-justify leading-7 w-11/12 mx-auto 
-                flex items-center">
-                <IoIosMail className="mr-2" />
-                    <a href="mailto:melsaahin@gmail.com" 
-                    className="hover:text-purple-500 hover:underline">
-                        melsaahin@gmail.com
-                    </a>
-                </p>
-            </div>
+        <div>
+        <h1 className="text-black font-bold 
+          text-[0.7rem] sm:text-[0.9rem] md:text-[1rem] 
+          leading-none mb-3">
+          {t('contact.title1')} 
+          <span className="purple">{t('contact.title2')}</span>
+        </h1>
+            <p className="text-[0.45rem] sm:text-[0.6rem] md:text-[0.7rem] 
+          leading-none mx-auto flex items-center justify-center">
+          <IoIosMail className="mr-1 text-[0.6rem] sm:text-[0.75rem]" />
+          <a 
+            href="mailto:melsaahin@gmail.com" 
+            className="hover:text-purple-500 hover:underline"
+          >
+            melsaahin@gmail.com
+          </a>
+        </p>
+        </div>
 
-               
-            </div>
 
-            <form
-                action={import.meta.env.VITE_GETFORM_KEY}
-                method="POST"
-                className=" max-w-6xl p-5 md:p-12"
-                id="form"
-            >
-            
-            <input
-                type="text"
-                id="name"
-                placeholder={t('contact.name')}
-                name="name"
-                className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
-            />
-            <input
-              type="email"
-              id="email"
-              placeholder={t('contact.email')}
-              name="email"
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
-            />
-            <textarea
-              name="textarea"
-              id="textarea"
-              cols="30"
-              rows="4"
-              placeholder={t('contact.message')}
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
-            />
-                <button
-                type="submit"
-                className="w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-primary-color 
-                            transition-transform duration-300 hover:scale-105"
-                >
-                {t('contact.send')}
-                </button>
-
-            
-          </form>
+       <form
+        action={import.meta.env.VITE_GETFORM_KEY}
+        method="POST"
+        className="w-[8rem] sm:w-[10rem] md:w-[12rem] 
+                  mx-auto mt-1 flex flex-col items-center gap-1"
+        id="form"
+      >
+        <input
+          type="text"
+          id="name"
+          placeholder={t('contact.name')}
+          name="name"
+          className="w-full rounded border border-purple-500 
+            py-[0.2rem] px-2 text-[0.55rem] focus:outline-none
+            focus:ring-[0.5px] focus:ring-purple-400"
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder={t('contact.email')}
+          name="email"
+          className="w-full rounded border border-purple-500 
+            py-[0.2rem] px-2 text-[0.55rem] focus:outline-none
+            focus:ring-[0.5px] focus:ring-purple-400"
+        />
+        <textarea
+          name="textarea"
+          id="textarea"
+          rows="2"
+          placeholder={t('contact.message')}
+          className="w-full rounded border border-purple-500 
+            py-[0.2rem] px-2 text-[0.55rem] focus:outline-none
+            focus:ring-[0.5px] focus:ring-purple-400"
+        />
+        <button
+          type="submit"
+          className="w-full py-[0.3rem] rounded text-white font-medium 
+            text-[0.6rem] bg-purple-600 
+            transition-transform duration-300 hover:bg-purple-800 hover:scale-105"
+        >
+          {t('contact.send')}
+        </button>
+      </form>
 
         </div>
         
       </div>
-        
-       {/*  <div className="grid md:grid-cols-2 place-items-center">
-           
-
-        </div> */}
-        
        
     </section>
   )

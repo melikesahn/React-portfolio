@@ -3,7 +3,6 @@ import {gsap} from "gsap";
 import { useRef, useEffect } from "react";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import profilepic from "../assets/avatar.png";
-//import profilepic2 from "../assets/pixelAvatar.png";
 const About = () => {
   
   const sectionRef=useRef(null);
@@ -124,8 +123,8 @@ const About = () => {
             {t('about.description')}
             </h3>
 
-             <img className='lg:h-[30rem] md:h-[25rem] h-[20rem] 
-            mix-blend-lighten' src={profilepic} alt='profile-img'/>
+             {/* <img className='lg:h-[30rem] md:h-[25rem] h-[20rem] 
+            mix-blend-lighten' src={profilepic} alt='profile-img'/> */}
             
         </div>
 
