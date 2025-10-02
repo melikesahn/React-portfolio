@@ -87,7 +87,7 @@ const Contact = () => {
       contactTextRef.current,
       {
         opacity: 1,
-        scale: 0.2,
+        scale: 0.15,
         ease: "power2.in",
         duration: 0.2,
       },

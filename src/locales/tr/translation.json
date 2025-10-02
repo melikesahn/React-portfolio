@@ -22,12 +22,12 @@
   "about": {
     "title": "Hakkım",
     "title2": "da",
-    "description": "Bitirme projemde React, Vue.js, Redux ve Node.js ile bir MERN stack web sitesi geliştirdim; RESTful API ve MongoDB ile veri yönetimi sağladım. Şu anda Next.js kullanarak API entegrasyonu, SSR, gelişmiş arama ve filtreleme özellikleri içeren bir proje ve MERN stack ile gerçek zamanlı bir sohbet uygulaması geliştiriyorum. Makine öğrenimi ve derin öğrenmede TensorFlow, Keras, PyTorch ile CNN ve YOLO tabanlı görüntü sınıflandırma projelerinde çalıştım.",
+    "description": "Full-stack web geliştirme ve yapay zeka alanında projeler üretiyorum. Şu anda Next.js tabanlı bir web sitesi geliştiriyorum. Ayrıca TensorFlow, Keras ve PyTorch ile CNN ve YOLO tabanlı görüntü sınıflandırma projeleri geliştirdim.",
     "project": "proje",
     "learn": "yıl öğrenme"
   },
   "skills": {
-    "title": "Yetenekler",
+    "title": "Teknolojilerim",
     "description": "Frontend, Full-Stack ve Oyun Geliştirme projeleri üzerine çalışıyorum. Bugüne kadar yaptığım ",
     "description2": "projelerim."
   },
@@ -44,7 +44,21 @@
     },
     "project3": {
       "title": "YZTA Bootcamp Oyunumuz",
-      "description": "3D top-down roguelike oyun. Unity ve C# kullanılarak geliştirildi."
+      "description": "3D top-down roguelike oyun. Unity ve C# kullanılarak geliştirildi. Projede Scrum Master rolünü üstlendim, oyun test süreçlerine katkı sağladım"
     }
-  }
+  },
+   "timeline": [
+    {
+      "year": "Aralık 2024 - Ağustos 2025",
+      "title": "Yapay Zeka ve Teknoloji Akademesi Bursiyeri",
+      "desc": "Eğitim: Agile Proje Yönetimi, Teknoloji Girişimciliği. Unity Oyun Geliştirme (Temel, İleri, Yapay Zeka Entegrasyonlu).",
+      "icon": "workload"
+    },
+    {
+      "year": "Temmuz 2023 - Ekim 2023",
+      "title": "Zorunlu Staj",
+      "desc": "Python tabanlı chatbot (Flask API, NLP/LLM, TensorFlow, Keras). React & Ant Design ile arayüz geliştirme. RESTful API & proje yönetimi (Git, GitHub, Trello)",
+      "icon": "history"
+    }
+  ]
 }

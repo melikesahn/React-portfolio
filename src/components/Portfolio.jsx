@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react"
 import project1 from "../assets/project1.jpg"
-import project2 from "../assets/project2.jpeg"
+import project2 from "../assets/project2.jpg"
 import project3 from "../assets/project3.jpg"
 import { AiOutlineGithub } from 'react-icons/ai'
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import { useTranslation } from 'react-i18next';
+
+
 
 const Portfolio = () => {
   const { t } = useTranslation();
@@ -32,7 +34,7 @@ const Portfolio = () => {
         title: t('projects.project2.title'),
         description: t('projects.project2.description'),
         links: {
-          //site: "#",
+          site: "https://melikesahn.github.io/React-portfolio/",
           github: "https://github.com/melikesahn/React-portfolio",
         },
       },
@@ -161,7 +163,7 @@ const Portfolio = () => {
       })
       //images scale and opacity anim
       tl.fromTo(image, {scale: 0, }, {scale: 1, 
-        duration: 0.5,})
+        duration: 0.1,})
 
       //des anim if it exists
       if(projectDes){
@@ -196,22 +198,21 @@ const Portfolio = () => {
 
       <div ref={horizontalRef} className="horizontal-section flex md:w-[300%] w-[300%]">
         {projects.map((project) => (
-          <div key={project.id} className=" panel w-full h-screen relative flex 
-          items-center justify-between"> 
-              <div className='w-full h-full relative flex flex-col items-center justify-center md:w-1/2 p-4'>
+          <div key={project.id} className=" panel w-full h-screen relative flex flex-col md:flex-row items-center justify-center gap-6"> 
+              <div className='w-full md:w-1/2 p-4 flex justify-center'>
                 
                 
                   <img
                     src={project.img}
                     alt={project.title}
-                    className='project-image max-w-xl max-h-[500px] object-contain rounded-2xl'
+                    className='project-image max-w-full max-h-[400px] object-contain rounded-2xl'
                   />
                
               </div>
-              <div className=' project-des w-full md:w-1/2 p-4 flex flex-col justify-center'>
-                <h3 className='text-2xl font-semibold text-black mb-4'>{project.title}</h3>
-                <p className='text-gray-700 mb-4'>{project.description}</p>
-                <div className='flex space-x-4'>
+              <div className="project-des w-full md:w-1/2 p-4 flex flex-col justify-center text-center md:text-left">
+              <h3 className="text-2xl font-semibold text-black mb-4">{project.title}</h3>
+              <p className="text-gray-700 mb-4">{project.description}</p>
+              <div className="flex justify-center md:justify-start space-x-4">
                   {project.links.site && (
                     <a 
                       href={project.links.site} 

@@ -22,7 +22,7 @@
   "about": {
     "title": "About ",
     "title2": "Me",
-    "description": "In my graduation project, I developed a MERN stack website with React, Vue.js, Redux and Node.js; I provided data management with RESTful API and MongoDB. I am currently developing a project with API integration, SSR, advanced search and filtering features using Next.js and a real-time chat application with MERN stack. In machine learning and deep learning, I worked on CNN and YOLO based image classification projects with TensorFlow, Keras, PyTorch.  ",
+    "description": "I develop projects in the fields of full-stack web development and artificial intelligence. I am currently developing a website with Next.js. In addition, I have developed image classification projects based on CNN and YOLO using TensorFlow, Keras, and PyTorch. ",
     "project": "project",
     "learn": "years of learning"
   },
@@ -44,7 +44,21 @@
     },
     "project3": {
       "title": "YZTA Bootcamp Game Project",
-      "description": "3D top-down roguelike game. Develop using unity ve C#."
+      "description": "3D top-down roguelike game. Develop using unity ve C#. I took on the role of Scrum Master, contributed to game testing."
     }
-  }
+  },
+  "timeline": [
+    {
+      "year": "December 2024 - August 2025",
+      "title": "Yapay Zeka ve Teknoloji Akademisi Trainee",
+      "desc": "Training: Agile Project Management, Technology Entrepreneurship. Unity Game Development (Basic, Advanced, AI-Integrated)",
+      "icon": "workload"
+    },
+    {
+      "year": "July 2023 - October 2023",
+      "title": "Compulsory Internship",
+      "desc": "Python-based chatbot (Flask API, NLP/LLM, TensorFlow, Keras). UI development with React & Ant Design. RESTful API & project management (Git, GitHub, Trello)",
+      "icon": "history"
+    }
+  ]
 }

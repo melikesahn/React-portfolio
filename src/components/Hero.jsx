@@ -35,7 +35,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <TypeAnimation
-            sequence={["Frontend Dev", 1000, "Full-Stack Dev", 1000, "Game Dev", 1000]}
+            sequence={["Frontend Dev", 1000, "Full Stack Dev", 1000, "Game Dev", 1000]}
             speed={50}
             repeat={Infinity}
             className="font-bold text-gray-400 text-lg sm:text-2xl md:text-4xl lg:text-5xl italic mb-4"
@@ -46,7 +46,7 @@ const Hero = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-gray-200 text-2xl sm:text-3xl md:text-5xl tracking-tight mb-4"
+            className="text-gray-200 text-xl sm:text-xl md:text-3xl tracking-tight mb-4"
           >
             {t("hero.greeting")}
             <br />
