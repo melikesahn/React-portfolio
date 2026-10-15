@@ -1,63 +1,80 @@
 {
   "nav": {
-    "home": "Ana Sayfa",
     "about": "Hakkımda",
     "skills": "Yetenekler",
     "projects": "Projeler",
     "contact": "İletişim"
   },
   "hero": {
+    "badge": "Bilgisayar Mühendisi",
     "greeting": "Merhaba, ben",
-    "role": "Web Geliştirici",
-    "description": "Bilgisayar Mühendisi."
-  },
-  "contact": {
-    "title1": "Benimle ",
-    "title2": "İletişime Geç",
-    "name": "Adın Soyadın...",
-    "email": "E-posta Adresiniz...",
-    "message": "Mesajınız...",
-    "send": "Gönder"
+    "description": "Web siteleri ve oyunlar geliştiriyorum.",
+    "cv": "CV İndir"
   },
   "about": {
-    "title": "Hakkım",
-    "title2": "da",
-    "description": "Full-stack web geliştirme ve yapay zeka alanında projeler üretiyorum. Şu anda Next.js tabanlı bir web sitesi geliştiriyorum. Ayrıca TensorFlow, Keras ve PyTorch ile CNN ve YOLO tabanlı görüntü sınıflandırma projeleri geliştirdim.",
-    "project": "proje",
-    "learn": "yıl öğrenme"
+    "title": "",
+    "title2": "Hakkımda",
+    "description": "Bilgisayar mühendisiyim. Yolculuğum web geliştirmeyle başladı. Bugün yapay zeka odaklı çalışıyorum: Claude Code ve Codex gibi araçlarla fikirden prototipe hızla geçip onu işlevsel bir ürüne dönüştürüyorum.",
+    "focus": "Odak alanları",
+    "focusItems": [
+      "Yapay Zeka Destekli Geliştirme (Vibe Coding)",
+      "Full-Stack Web",
+      "Oyun Geliştirme"
+    ],
+    "experience": "Deneyim"
   },
   "skills": {
     "title": "Teknolojilerim",
-    "description": "Frontend, Full-Stack ve Oyun Geliştirme projeleri üzerine çalışıyorum. Bugüne kadar yaptığım ",
-    "description2": "projelerim."
+    "description": "Stack'im hızlı ürün çıkarmak için kurulu: hız için yapay zeka kodlama araçları, kalite için modern bir web stack'i. Tüm projelerime buradan ulaşabilirsin: ",
+    "description2": "GitHub repolarım →",
+    "aiNote": "Yapay zekayı bir pair programmer gibi kullanıyorum: prompt, prototip, iterasyon ve yayın. Her gün kullandığım araçlar bunlar.",
+    "categories": {
+      "ai": "AI & Vibe Coding",
+      "frontend": "Frontend",
+      "backend": "Backend & Veri",
+      "tools": "Deploy & Araçlar",
+      "game": "Oyun Geliştirme"
+    }
   },
   "projects": {
     "title": "Projelerim",
     "visitSite": "Projeyi Görüntüle",
     "project1": {
       "title": "MERN Stack Sohbet Uygulaması",
-      "description": "Gerçek zamanlı chat uygulaması. React, Node.js, Express.js, MongoDB, Socket.IO kullanarak geliştirildi."
+      "description": "Gerçek zamanlı chat uygulaması. React, Node.js, Express.js, MongoDB ve Socket.IO kullanılarak geliştirildi."
     },
     "project2": {
-      "title": "Kişisel Portfolio Sitesi",
-      "description": "React, Tailwind CSS, Framer Motion ve GSAP kullanarak geliştirilen kişisel web sitesi"
+      "title": "Kişisel Portfolyo Sitesi",
+      "description": "React, Tailwind CSS, Framer Motion ve GSAP kullanılarak geliştirilen kişisel web sitesi."
     },
     "project3": {
       "title": "YZTA Bootcamp Oyunumuz",
-      "description": "3D top-down roguelike oyun. Unity ve C# kullanılarak geliştirildi. Projede Scrum Master rolünü üstlendim, oyun test süreçlerine katkı sağladım"
+      "description": "Unity ve C# ile geliştirilen 3D top-down roguelike oyun. Projede Scrum Master rolünü üstlendim, oyun test süreçlerine katkı sağladım."
     }
   },
-   "timeline": [
+  "contact": {
+    "title1": "Benimle ",
+    "title2": "İletişime Geç",
+    "description": "Aklında bir proje mi var ya da sadece merhaba mı demek istiyorsun? Bana yaz, en kısa sürede dönüş yapayım.",
+    "name": "Adın Soyadın",
+    "email": "E-posta adresin",
+    "message": "Mesajın",
+    "send": "Gönder"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  },
+  "timeline": [
     {
       "year": "Aralık 2024 - Ağustos 2025",
-      "title": "Yapay Zeka ve Teknoloji Akademesi Bursiyeri",
+      "title": "Yapay Zeka ve Teknoloji Akademisi Bursiyeri",
       "desc": "Eğitim: Agile Proje Yönetimi, Teknoloji Girişimciliği. Unity Oyun Geliştirme (Temel, İleri, Yapay Zeka Entegrasyonlu).",
       "icon": "workload"
     },
     {
       "year": "Temmuz 2023 - Ekim 2023",
       "title": "Zorunlu Staj",
-      "desc": "Python tabanlı chatbot (Flask API, NLP/LLM, TensorFlow, Keras). React & Ant Design ile arayüz geliştirme. RESTful API & proje yönetimi (Git, GitHub, Trello)",
+      "desc": "Python tabanlı chatbot (Flask API, NLP/LLM, TensorFlow, Keras). React & Ant Design ile arayüz geliştirme. RESTful API & proje yönetimi (Git, GitHub, Trello).",
       "icon": "history"
     }
   ]

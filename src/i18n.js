@@ -20,7 +20,8 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    lng: 'en',
+    supportedLngs: ['en', 'tr'],
+    load: 'languageOnly',
     interpolation: {
       escapeValue: false
     },
@@ -30,5 +31,12 @@ i18n
       lookupLocalStorage: 'i18nextLng',
     }
   });
+
+// <html lang> etiketini seçili dille senkron tut
+const syncHtmlLang = (lng) => {
+  document.documentElement.lang = lng;
+};
+syncHtmlLang(i18n.resolvedLanguage);
+i18n.on('languageChanged', syncHtmlLang);
 
 export default i18n;

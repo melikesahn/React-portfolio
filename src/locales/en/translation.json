@@ -1,63 +1,80 @@
 {
   "nav": {
-    "home": "Home",
     "about": "About",
+    "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact",
-    "skills": "Skills"
+    "contact": "Contact"
   },
   "hero": {
+    "badge": "Computer Engineer",
     "greeting": "Hi, I'm",
-    "role": "Web Developer",
-    "description": "Computer Engineer."
-  },
-  "contact": {
-    "title1": "Get ",
-    "title2": "in Touch",
-    "name": "Name...",
-    "email": "Email...",
-    "message": "Message...",
-    "send": "Send"
+    "description": "I build websites and games.",
+    "cv": "Download CV"
   },
   "about": {
     "title": "About ",
     "title2": "Me",
-    "description": "I develop projects in the fields of full-stack web development and artificial intelligence. I am currently developing a website with Next.js. In addition, I have developed image classification projects based on CNN and YOLO using TensorFlow, Keras, and PyTorch. ",
-    "project": "project",
-    "learn": "years of learning"
+    "description": "I'm a computer engineer. My journey started with web development. Today I work AI-first: I use tools like Claude Code and Codex to go from idea to prototype quickly and turn it into a functional product.",
+    "focus": "Focus areas",
+    "focusItems": [
+      "AI-Assisted Development (Vibe Coding)",
+      "Full-Stack Web",
+      "Game Development"
+    ],
+    "experience": "Experience"
   },
   "skills": {
     "title": "Skills",
-    "description": "I am working on Frontend ,Full-Stack and Game Development projects. These are the my ",
-    "description2": "projects."
+    "description": "My stack is built for shipping fast: AI coding tools for speed, a modern web stack for quality. See everything I've built in my ",
+    "description2": "GitHub repositories →",
+    "aiNote": "I build with AI as a pair programmer: prompt, prototype, iterate and ship. These are the tools I use every day.",
+    "categories": {
+      "ai": "AI & Vibe Coding",
+      "frontend": "Frontend",
+      "backend": "Backend & Data",
+      "tools": "Deploy & Tools",
+      "game": "Game Dev"
+    }
   },
   "projects": {
     "title": "Projects",
     "visitSite": "Visit Site",
     "project1": {
-      "title": "MERN Stack Website",
-      "description": "Real-time chat application. Developed using React, Node.js, Express.js, MongoDB, Socket.IO."
+      "title": "MERN Stack Chat App",
+      "description": "Real-time chat application. Developed using React, Node.js, Express.js, MongoDB and Socket.IO."
     },
     "project2": {
       "title": "React Portfolio Website",
-      "description": "Personal website developed using React, Tailwind CSS, Framer Motion and GSAP"
+      "description": "Personal website developed using React, Tailwind CSS, Framer Motion and GSAP."
     },
     "project3": {
       "title": "YZTA Bootcamp Game Project",
-      "description": "3D top-down roguelike game. Develop using unity ve C#. I took on the role of Scrum Master, contributed to game testing."
+      "description": "3D top-down roguelike game developed using Unity and C#. I took on the role of Scrum Master and contributed to game testing."
     }
+  },
+  "contact": {
+    "title1": "Get ",
+    "title2": "in Touch",
+    "description": "Have a project in mind or just want to say hi? Send me a message and I'll get back to you.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  },
+  "footer": {
+    "rights": "All rights reserved."
   },
   "timeline": [
     {
       "year": "December 2024 - August 2025",
-      "title": "Yapay Zeka ve Teknoloji Akademisi Trainee",
-      "desc": "Training: Agile Project Management, Technology Entrepreneurship. Unity Game Development (Basic, Advanced, AI-Integrated)",
+      "title": "Artificial Intelligence and Technology Academy Trainee",
+      "desc": "Training: Agile Project Management, Technology Entrepreneurship. Unity Game Development (Basic, Advanced, AI-Integrated).",
       "icon": "workload"
     },
     {
       "year": "July 2023 - October 2023",
       "title": "Compulsory Internship",
-      "desc": "Python-based chatbot (Flask API, NLP/LLM, TensorFlow, Keras). UI development with React & Ant Design. RESTful API & project management (Git, GitHub, Trello)",
+      "desc": "Python-based chatbot (Flask API, NLP/LLM, TensorFlow, Keras). UI development with React & Ant Design. RESTful API & project management (Git, GitHub, Trello).",
       "icon": "history"
     }
   ]

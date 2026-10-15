@@ -1,152 +1,126 @@
 import cv from "../assets/cv.pdf";
-//import profilepic from "../assets/hero.webp";
 import profilepic from "../assets/avatar.png";
 import { TypeAnimation } from "react-type-animation";
-import ShinyEffect from "./ShinyEffect.jsx";
 import { useTranslation } from "react-i18next";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
-import { DiJavascript1, DiNodejsSmall, DiReact, DiMongodb } from "react-icons/di";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { SiClaude, SiOpenai } from "react-icons/si";
+import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import Reveal from "./Reveal.jsx";
 
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-});
+// Avatarın çevresinde yüzen küçük rozet
+const FloatingBadge = ({ icon, label, className, duration }) => (
+  <motion.div
+    animate={{ y: [0, -10, 0] }}
+    transition={{ duration, repeat: Infinity, ease: "easeInOut" }}
+    className={`glass absolute flex items-center gap-2 rounded-2xl px-3 py-2 text-sm text-zinc-200 shadow-xl ${className}`}
+  >
+    {icon}
+    {label}
+  </motion.div>
+);
+
+FloatingBadge.propTypes = {
+  icon: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  duration: PropTypes.number,
+};
 
 const Hero = () => {
   const { t } = useTranslation();
+
   return (
-    <section className="min-h-screen mx-auto relative flex flex-col justify-center px-6 md:px-12 overflow-hidden">
-      <div className="grid md:grid-cols-2 place-items-center gap-8 md:gap-16">
-        {/* Left side (Text) */}
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <TypeAnimation
-            sequence={["Frontend Dev", 1000, "Full Stack Dev", 1000, "Game Dev", 1000]}
-            speed={50}
-            repeat={Infinity}
-            className="font-bold text-gray-400 text-lg sm:text-2xl md:text-4xl lg:text-5xl italic mb-4"
-          />
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-gray-200 text-xl sm:text-xl md:text-3xl tracking-tight mb-4"
-          >
-            {t("hero.greeting")}
-            <br />
-            <span className="text-purple-600 text-3xl sm:text-4xl md:text-5xl">
-              Melike Şahin
+    <section
+      id="home"
+      className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-16 pt-32"
+    >
+      <div className="grid items-center gap-16 md:grid-cols-[1.4fr_1fr]">
+        {/* Sol: metin */}
+        <div className="order-2 text-center md:order-1 md:text-left">
+          <Reveal>
+            <span className="chip mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              </span>
+              {t("hero.badge")}
             </span>
-          </motion.p>
+          </Reveal>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 1 }}
-            className="text-gray-300 max-w-sm sm:max-w-md md:max-w-lg text-base sm:text-lg md:text-xl mb-6"
-          >
-            {t("hero.description")}
-          </motion.p>
+          <Reveal delay={0.1}>
+            <p className="mb-2 text-lg text-zinc-400">{t("hero.greeting")}</p>
+            <h1 className="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+              Melike <span className="text-gradient">Şahin</span>
+            </h1>
+          </Reveal>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 1.5 }}
-            className="flex flex-row items-center gap-6 my-4 md:mb-0"
-          >
-            <motion.a
-              href={cv}
-              download="MelikeSahin_CV.pdf"
-              whileHover={{
-                scale: 1.2,
-                boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
-              }}
-              className="z-10 cursor-pointer font-bold text-gray-200 p-3 sm:p-4 border border-purple-400 rounded-xl shadow-xl shadow-purple-600 transition-all duration-300 hover:translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-purple-900"
+          <Reveal delay={0.2}>
+            <TypeAnimation
+              sequence={["Vibe Coder", 1500, "Full Stack Dev", 1500]}
+              wrapper="p"
+              speed={50}
+              repeat={Infinity}
+              className="mt-4 h-8 font-mono text-lg text-fuchsia-300 md:text-xl"
+            />
+          </Reveal>
+
+          <Reveal delay={0.3}>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-zinc-400 md:mx-0">
+              {t("hero.description")}
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.4} className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+            <a href={cv} download="MelikeSahin_CV.pdf" className="btn-primary">
+              <FiDownload />
+              {t("hero.cv")}
+            </a>
+            <a
+              href="https://github.com/melikesahn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="btn-ghost text-xl"
             >
-              Download CV
-            </motion.a>
-
-            <div className="flex gap-6 flex-row text-3xl sm:text-4xl md:text-6xl text-purple-400 z-20">
-              <motion.a
-                whileHover={{ scale: 1.2 }}
-                href="https://github.com/melikesahn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineGithub />
-              </motion.a>
-
-              <motion.a
-                whileHover={{ scale: 1.2 }}
-                href="https://www.linkedin.com/in/melikesahinn/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineLinkedin />
-              </motion.a>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Right side (Image) */}
-          <motion.img
-          src={profilepic}
-          className="w-32 sm:w-48 md:w-64 lg:w-80 cursor-pointer rounded-full shadow-xl shadow-purple-600"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.05, y: 8, boxShadow: "0px 10px 30px rgba(128,0,128,0.8)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        /> 
-          
+              <AiOutlineGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/melikesahinn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="btn-ghost text-xl"
+            >
+              <AiOutlineLinkedin />
+            </a>
+          </Reveal>
         </div>
 
-      {/* Tech icons */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 2 }}
-        className="flex flex-row text-4xl sm:text-5xl md:text-6xl lg:text-7xl px-4 md:px-0 w-full justify-evenly items-center py-12"
-      >
-        <motion.div initial="initial" animate="animate" variants={iconVariants(1.5)}>
-          <DiJavascript1 className="text-yellow-500 mx-2" />
-        </motion.div>
-        <motion.div initial="initial" animate="animate" variants={iconVariants(3)}>
-          <DiReact className="text-blue-500 mx-2" />
-        </motion.div>
-        <motion.div initial="initial" animate="animate" variants={iconVariants(5)}>
-          <DiNodejsSmall className="text-green-500 mx-2" />
-        </motion.div>
-        <motion.div initial="initial" animate="animate" variants={iconVariants(4)}>
-          <DiMongodb className="text-green-500 mx-2" />
-        </motion.div>
-        <motion.div initial="initial" animate="animate" variants={iconVariants(3.5)}>
-          <RiTailwindCssFill className="text-blue-500 mx-2" />
-        </motion.div>
-      </motion.div>
-
-      {/* Background shiny effect */}
-      <div className="absolute inset-0 hidden md:block">
-        <ShinyEffect left={0} top={0} size={1400} />
+        {/* Sağ: avatar */}
+        <Reveal delay={0.2} y={0} className="relative order-1 mx-auto md:order-2">
+          <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-violet-600 via-fuchsia-500 to-pink-400 opacity-30 blur-3xl" />
+          <div className="relative rounded-full bg-gradient-to-tr from-violet-500 via-fuchsia-500 to-pink-400 p-[3px]">
+            <img
+              src={profilepic}
+              alt="Melike Şahin"
+              className="h-56 w-56 rounded-full bg-[#0d0817] object-cover sm:h-72 sm:w-72 lg:h-80 lg:w-80"
+            />
+          </div>
+          <FloatingBadge
+            icon={<SiClaude className="text-lg text-[#D97757]" />}
+            label="Claude Code"
+            className="-right-4 top-6"
+            duration={4}
+          />
+          <FloatingBadge
+            icon={<SiOpenai className="text-base text-white" />}
+            label="Codex"
+            className="-left-6 bottom-10"
+            duration={5}
+          />
+        </Reveal>
       </div>
     </section>
   );

@@ -1,13 +1,23 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
+
+const DESKTOP_QUERY = "(min-width: 769px) and (pointer: fine)";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
   const cursorBorderRef = useRef(null);
 
-  const isMobile =
-    typeof window !== "undefined" &&
-    window.matchMedia("(max-width:768px)").matches;
+  // index.css'teki "cursor: none" ile aynı medya sorgusu
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && !window.matchMedia(DESKTOP_QUERY).matches
+  );
+
+  useEffect(() => {
+    const mql = window.matchMedia(DESKTOP_QUERY);
+    const onChange = (e) => setIsMobile(!e.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
 
   useEffect(() => {
     if (isMobile) return; // burada mobile ise hiçbir şey yapmıyoruz
